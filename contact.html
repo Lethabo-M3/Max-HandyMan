@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Contact Us - Max's Handyman Services</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="appointment.html">Appointment</a>
+        </nav>
+    </header>
+    <main>
+        <section id="contact-details">
+            <div class="overlay">
+                <h2>Get in Touch</h2>
+                <p>
+                    <strong>Phone:</strong> +27 123 456 7890<br>
+                    <strong>Email:</strong> contact@maxshandyman.co.za<br>
+                    <strong>Address:</strong> 45 Main Street, Diepsloot, Gauteng, South Africa<br>
+                </p>
+            </div>
+        </section>
+        <section id="map">
+            <h3>Find Us</h3>
+            <div id="map-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Max's Handyman Services</p>
+    </footer>
+    <script>
+        // Initialize Google Map
+        function initMap() {
+            const diepsloot = { lat: -25.936041, lng: 28.011243 }; // Coordinates for Diepsloot
+            const map = new google.maps.Map(document.getElementById('map-container'), {
+                zoom: 14,
+                center: diepsloot,
+            });
+            new google.maps.Marker({
+                position: diepsloot,
+                map: map,
+                title: "Max's Handyman Services",
+            });
+        }
+    </script>
+    <!-- Load Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

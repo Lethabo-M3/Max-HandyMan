@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Book an Appointment - Max's Handyman Services</title>
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="appointment.html">Appointment</a>
+        </nav>
+    </header>
+    <main>
+        <section id="appointment-form">
+            <div class="overlay">
+                <h2>Schedule Your Appointment</h2>
+                <form action="backend/saveAppointment.php" method="POST">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your contact number" required>
+
+                    <label for="appointmentDate">Preferred Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+                    <label for="appointmentTime">Preferred Time:</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+                    <button type="submit" class="btn">Book Appointment</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Max's Handyman Services</p>
+    </footer>
+</body>
+</html>

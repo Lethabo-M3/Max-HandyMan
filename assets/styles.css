@@ -1,0 +1,141 @@
+/* Add background image for the homepage */
+body {
+    font-family: 'Verdana', sans-serif; /* Updated font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('../images/handyman-bg.jpg'); /* Path to handyman background image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Text styling for improved look */
+header {
+    background: rgba(0, 0, 0, 0.7); /* Transparent background for readability */
+    color: white;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+section#intro {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background overlay */
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section#intro h2 {
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+section#intro p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+}
+
+footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+
+
+/* Appointment Form Section */
+section#appointment-form {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent overlay */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section#appointment-form h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Submit Button Styling */
+form .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form .btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+
+
+/* Styling for the service page */
+
+.serviceList3 
+{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+   
+}
+
+
+.serviceList3 h2
+
+{
+    font-size: 2.5em;
+    color: #4CAF50; 
+}
