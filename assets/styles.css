@@ -139,3 +139,79 @@ align-items: center;
     font-size: 2.5em;
     color: #0ea4da; 
 }
+/* Styling for the unordered list and list items */
+.ulList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ulList li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f7f7f7; /* Light background for each item */
+    border: 1px solid #ddd;    /* Subtle border */
+    border-radius: 5px;        /* Rounded corners */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.ulList li:hover {
+    background-color: #ffdb99; /* Highlighted background color */
+    transform: translateX(10px); /* Subtle move to the right */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+/* Optional: Styling for text */
+.ulList li:hover span {
+    color: #333; /* Darker text on hover */
+    font-weight: bold; /* Emphasize hovered item */
+}
+/* Styling for input fields and select dropdown */
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="time"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for input fields and select dropdown */
+input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover, 
+input[type="date"]:hover, input[type="time"]:hover, select:hover {
+    border-color: #ffdb99;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Focus effect for input fields and select dropdown */
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, 
+input[type="date"]:focus, input[type="time"]:focus, select:focus {
+    border-color: #ff9933;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+    outline: none;
+}
+
+/* Styling for the submit button */
+button.btn {
+    background-color: #ff9933;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+button.btn:hover {
+    background-color: #ff6600;
+    transform: scale(1.05);
+}
+
+/* Active state for the button */
+button.btn:active {
+    background-color: #cc5200;
+    transform: scale(0.95);
+}

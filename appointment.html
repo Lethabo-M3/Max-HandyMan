@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
-    <title>Book an Appointment - Max's Handyman Services</title>
+    <title>Manage Appointments - Max's Handyman Services</title>
 </head>
 <body>
     <header>
-        <h1>Book an Appointment</h1>
+        <h1>Manage Appointments</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -17,10 +17,11 @@
         </nav>
     </header>
     <main>
+        <!-- Appointment Form -->
         <section id="appointment-form">
             <div class="overlay">
                 <h2>Schedule Your Appointment</h2>
-                <form action="backend/saveAppointment.php" method="POST">
+                <form id="appointmentForm" action="backend/saveAppointment.php" method="POST">
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
 
@@ -39,9 +40,55 @@
                     <label for="appointmentTime">Preferred Time:</label>
                     <input type="time" id="appointmentTime" name="appointmentTime" required>
 
-                    <button type="submit" class="btn">Book Appointment</button>
+                    <label for="appointmentType">Appointment Type:</label>
+                    <select id="appointmentType" name="appointmentType" required>
+                        <option value="" disabled selected>Select an appointment type</option>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="carpentry">Carpentry</option>
+                        <option value="painting">Painting</option>
+                        <option value="generalMaintenance">General Maintenance</option>
+                    </select>
+
+                    <button type="submit" class="btn">Create Appointment</button>
                 </form>
             </div>
+        </section>
+
+        <!-- Appointment Table for CRUD Operations -->
+        <section id="appointment-table">
+            <h2>Existing Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row -->
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>123-456-7890</td>
+                        <td>2024-12-01</td>
+                        <td>14:00</td>
+                        <td>Plumbing</td>
+                        <td>
+                            <button class="btn update">Update</button>
+                            <button class="btn delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Dynamic rows will go here -->
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
@@ -49,3 +96,21 @@
     </footer>
 </body>
 </html>
+<form action="backend/saveAppointment.php" method="POST">
+    <!-- Other form fields -->
+    <input type="text" id="firstName" name="firstName" required>
+    <input type="text" id="lastName" name="lastName" required>
+    <input type="email" id="email" name="email" required>
+    <input type="tel" id="contactNumber" name="contactNumber" required>
+    <input type="date" id="appointmentDate" name="appointmentDate" required>
+    <input type="time" id="appointmentTime" name="appointmentTime" required>
+    <select id="appointmentType" name="appointmentType" required>
+        <option value="" disabled selected>Select an appointment type</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="electrical">Electrical</option>
+        <option value="carpentry">Carpentry</option>
+        <option value="painting">Painting</option>
+        <option value="generalMaintenance">General Maintenance</option>
+    </select>
+    <button type="submit" class="btn">Create Appointment</button>
+</form>
